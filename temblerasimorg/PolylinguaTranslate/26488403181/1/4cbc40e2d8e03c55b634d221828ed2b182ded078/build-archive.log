@@ -1,0 +1,77 @@
+Command line invocation:
+    /Applications/Xcode_26.3.app/Contents/Developer/usr/bin/xcodebuild archive -workspace ./PolylinguaTranslate.xcworkspace -scheme PolylinguaTranslate -configuration Release -destination generic/platform=iOS -archivePath /Users/runner/work/PolylinguaTranslate/PolylinguaTranslate/build.xcarchive
+
+Resolve Package Graph
+
+
+Resolved source packages:
+  llama: https://github.com/ggerganov/llama.cpp @ b4000 (c02e5ab)
+
+ComputePackagePrebuildTargetDependencyGraph
+
+Prepare packages
+
+CreateBuildRequest
+
+SendProjectDescription
+
+CreateBuildOperation
+
+ComputeTargetDependencyGraph
+note: Building targets in dependency order
+note: Target dependency graph (9 targets)
+    Target 'PolylinguaTranslate' in project 'PolylinguaTranslate'
+        ➜ Implicit dependency on target 'Pods-PolylinguaTranslate' in project 'Pods' via file 'Pods_PolylinguaTranslate.framework' in build phase 'Link Binary'
+        ➜ Implicit dependency on target 'SVProgressHUD' in project 'Pods' via options '-framework SVProgressHUD' in build setting 'OTHER_LDFLAGS'
+        ➜ Implicit dependency on target 'SubPurchaseKit' in project 'Pods' via options '-framework SubPurchaseKit' in build setting 'OTHER_LDFLAGS'
+        ➜ Explicit dependency on target 'llama' in project 'llama'
+    Target 'llama' in project 'llama'
+        ➜ Explicit dependency on target 'llama' in project 'llama'
+        ➜ Explicit dependency on target 'llama_llama' in project 'llama'
+    Target 'llama' in project 'llama'
+        ➜ Explicit dependency on target 'llama_llama' in project 'llama'
+    Target 'llama_llama' in project 'llama' (no dependencies)
+    Target 'Pods-PolylinguaTranslate' in project 'Pods'
+        ➜ Explicit dependency on target 'SVProgressHUD' in project 'Pods'
+        ➜ Explicit dependency on target 'SubPurchaseKit' in project 'Pods'
+        ➜ Explicit dependency on target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'SubPurchaseKit' in project 'Pods'
+        ➜ Explicit dependency on target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'UMCommon' in project 'Pods'
+        ➜ Explicit dependency on target 'UMDevice' in project 'Pods'
+    Target 'UMDevice' in project 'Pods' (no dependencies)
+    Target 'SVProgressHUD' in project 'Pods' (no dependencies)
+
+GatherProvisioningInputs
+
+CreateBuildDescription
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x objective-c -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/usr/bin/actool --print-asset-tag-combinations --output-format xml1 /Users/runner/work/PolylinguaTranslate/PolylinguaTranslate/PolylinguaTranslate/Resources/Assets.xcassets
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/swiftc --version
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/clang -v -E -dM -arch arm64 -isysroot /Applications/Xcode_26.3.app/Contents/Developer/Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS26.2.sdk -x c++ -c /dev/null
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/libtool -V
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ld -version_details
+
+ExecuteExternalTool /Applications/Xcode_26.3.app/Contents/Developer/usr/bin/actool --version --output-format xml1
+
+Build description signature: e0894158943342aa963ba0ad0f22921c
+Build description path: /Users/runner/Library/Developer/Xcode/DerivedData/PolylinguaTranslate-anseouuysqsongglnnjypltxzzww/Build/Intermediates.noindex/ArchiveIntermediates/PolylinguaTranslate/IntermediateBuildFilesPath/XCBuildData/e0894158943342aa963ba0ad0f22921c.xcbuilddata
+/Users/runner/work/PolylinguaTranslate/PolylinguaTranslate/PolylinguaTranslate.xcodeproj: error: No profile for team '87LBBKNAGS' matching 'appstore-6768586908-20260527031105865' found: Xcode couldn't find any provisioning profiles matching '87LBBKNAGS/appstore-6768586908-20260527031105865'. Install the profile (by dragging and dropping it onto Xcode's dock item) or select a different one in the Signing & Capabilities tab of the target editor. (in target 'PolylinguaTranslate' from project 'PolylinguaTranslate')
+** ARCHIVE FAILED **
+
+
+The following build commands failed:
+	Archiving workspace PolylinguaTranslate with scheme PolylinguaTranslate
+(1 failure)
